@@ -41,7 +41,7 @@
 - [ ] 1. Configurar um servidor básico usando Express.
 - [ ] 2. Implementar WebSocket para comunicação em tempo real entre os jogadores.
 
-# Usando GIT para versionar o código.
+# Usando GIT para versionar o código
 
 - [ ] 1. Git Clone `git clone https://github.com/JuniorRibas/game-playground.git`
 - [ ] 2. Depois de alguma alteração no código enviar tudo para o github
