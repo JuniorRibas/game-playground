@@ -6,10 +6,10 @@
 
 **Passos:**
 
-- [ ] 1. Criar um arquivo `index.html`.
-- [ ] 2. Adicionar um formulário com dois campos de texto para os nomes dos jogadores e um botão para iniciar o jogo.
-- [ ] 3. Criar a estrutura do tabuleiro do jogo da velha (3x3 grid) usando divs.
-- [ ] 4. Estilizar o formulário e o tabuleiro usando CSS.
+- [x] 1. Criar um arquivo `index.html`.
+- [x] 2. Adicionar um formulário com dois campos de texto para os nomes dos jogadores e um botão para iniciar o jogo.
+- [x] 3. Criar a estrutura do tabuleiro do jogo da velha (3x3 grid) usando divs.
+- [x] 4. Estilizar o formulário e o tabuleiro usando CSS.
 
 
 ## Etapa 2: Adicionando JavaScript
@@ -18,9 +18,9 @@
 
 **Passos:**
 
-- [ ] 1. Pegar os nomes dos jogadores do formulário e armazená-los.
-- [ ] 2. Implementar a lógica do jogo da velha para alternar entre os jogadores e verificar vencedores.
-- [ ] 3. Atualizar o tabuleiro com os movimentos dos jogadores.
+- [x] 1. Pegar os nomes dos jogadores do formulário e armazená-los.
+- [x] 2. Implementar a lógica do jogo da velha para alternar entre os jogadores e verificar vencedores.
+- [x] 3. Atualizar o tabuleiro com os movimentos dos jogadores.
 
 
 ## Etapa 3: Ranking de Jogadores
