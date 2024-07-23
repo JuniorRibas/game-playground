@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da idosa</title>
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="stilojogo.css">
+    <script src="java.js" defer></script>
 </head>
+
 <body>
-    
+    <main>
+        <div class="flex">
+            <h1 class="titulo">
+                <strong class="jogo">JOGO</strong> DA <strong class="maiuscula">VELHA</strong>
+            </h1>
+            <img class="logo" src="velhabr.png" alt="">
+        </div>
+        <div class="list">
+            <nav>
+                <li>Objetivo: Alinhar três de seus símbolos em linha reta (horizontal, vertical ou diagonal).</li>
+                <li>Primeiro Jogador: Geralmente, o jogador que escolhe "X" começa primeiro.</li>
+                <li>Turnos: Os jogadores alternam turnos. No seu turno, coloque seu símbolo em uma das nove casas vazias do tabuleiro.</li>
+                <li>Escolha os Símbolos: Um jogador será "X" e o outro será "O".</li>
+                <li>Empate: Se todas as nove casas estiverem preenchidas e nenhum jogador tiver alinhado três símbolos, o jogo termina em empate.</li>
+                <li>Verificar Vitória: Após cada jogada, verifique se há três símbolos em linha (horizontal, vertical ou diagonal).</li>
+                <li>Aproveite o jogo!</li>
+            </nav>
+        </div>
+        <div>
+            <aside>
+            </aside>
+        </div>
+        <div class="contener">
+            <form class="formulario">
+                <input class="player-1" type="text" placeholder="Nome do jogador I" required>
+                <div class="grid">
+                    <div class="celula" id="cell-0"></div>
+                    <div class="celula" id="cell-1"></div>
+                    <div class="celula" id="cell-2"></div>
+
+                    <div class="celula" id="cell-3"></div>
+                    <div class="celula" id="cell-4"></div>
+                    <div class="celula" id="cell-5"></div>
+
+                    <div class="celula" id="cell-6"></div>
+                    <div class="celula" id="cell-7"></div>
+                    <div class="celula" id="cell-8"></div>
+                </div>
+                <input class="player-2" type="text" placeholder="Nome do jogador II" required>
+            </form>
+        </div>
+    </main>
+    <footer class="instagram">
+        <a class="insta" href="https://www.instagram.com/daniel_herenio?igsh=MW0xMXVid2syeDI4Mg==">Criador</a>
+    </footer>
 </body>
+
 </html>
