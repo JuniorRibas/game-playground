@@ -29,8 +29,8 @@
 
 **Passos:**
 
-- [ ] 1. Armazenar as vitórias dos jogadores no localStorage.
-- [ ] 2. Exibir o ranking na interface.
+- [x] 1. Armazenar as vitórias dos jogadores no localStorage.
+- [x] 2. Exibir o ranking na interface.
 
 ## Etapa 4: Servidor com Express e WebSocket
 
