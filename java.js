@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         [2, 4, 6]
     ];
 
+    // Limpar campos de entrada de jogadores e esvaziar a lista de vencedores ao carregar a página
+    clearPlayerInputs();
+    clearWinnersListFromScreen();
+
     cells.forEach(cell => {
         cell.addEventListener("click", handleCellClick);
     });
@@ -21,12 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleCellClick(event) {
         const cell = event.target;
         const cellIndex = Array.from(cells).indexOf(cell);
+        
 
         if (cell.textContent === "") {
             cell.textContent = currentPlayer;
             if (checkWin()) {
                 const winnerName = currentPlayer === "X" ? player1Input.value : player2Input.value;
                 alert(`${winnerName} ganhou o jogo, parabéns!`);
+                storeWinner(winnerName);
                 resetBoard();
             } else if (isBoardFull()) {
                 alert("Empate!");
@@ -57,10 +63,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         currentPlayer = "X";
     }
+
+    function storeWinner(winnerName) {
+        let winners = JSON.parse(localStorage.getItem('winners')) || [];
+        winners.push(winnerName);
+        localStorage.setItem('winners', JSON.stringify(winners));
+    }
+
+    function clearPlayerInputs() {
+        player1Input.value = '';
+        player2Input.value = '';
+    }
+
+    function clearWinnersListFromScreen() {
+        const winnersList = document.getElementById('winners-list');
+        winnersList.innerHTML = '';
+    }
+
+    document.getElementById('ganhadores').addEventListener('click', ganhadores);
+
+    function ganhadores() {
+        const winners = JSON.parse(localStorage.getItem('winners')) || [];
+        const winnersList = document.getElementById('winners-list');
+        winnersList.innerHTML = '';
+
+        if (winners.length === 0) {
+            winnersList.textContent = 'Nenhum ganhador registrado.';
+        } else {
+            winners.forEach((winner, index) => {
+                const listItem = document.createElement('div');
+                listItem.textContent = `Ganhador ${index + 1}: ${winner}`;
+                winnersList.appendChild(listItem);
+            });
+        }
+    }
 });
-
-
-
 
 // let nome = window.prompt('Qual o seu nome ?')
 // document.write(`<h2> Seja bem vindo <strong> ${nome.toUpperCase()} </strong> ! </h2>`)
